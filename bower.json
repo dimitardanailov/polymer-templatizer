@@ -1,0 +1,21 @@
+{
+  "name": "Templatizer",
+  "authors": [
+    "Dimitar Danailov <dimityr.danailov@gmail.com>"
+  ],
+  "description": "I am researching about Polymer.Templatizer",
+  "main": "index.html",
+  "keywords": [
+    "Polymer.Templatizer"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
