@@ -3,7 +3,7 @@
   "authors": [
     "Dimitar Danailov <dimityr.danailov@gmail.com>"
   ],
-  "description": "I am researching about Polymer.Templatizer",
+  "description": "I am researching about Polymer.Templatizer -> (http://t-code.pl/blog/2015/08/polymer-templatizer/)",
   "main": "index.html",
   "keywords": [
     "Polymer.Templatizer"
@@ -17,5 +17,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.8.1"
+  }
 }

@@ -1,0 +1,58 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="hydra-collection">
+    <template>
+        <div id="repeater"></div>
+        <content id="templates" select="template.member"></content>
+    </template>
+
+    <script>
+        Polymer({
+          is: 'hydra-collection',
+
+          properties: {
+              collection: {
+                  type: Object,
+                  member: [
+                      {
+                          label: 'Item one'
+                      },
+                      {
+                          label: 'Item two'
+                      }
+                  ]
+              }
+          },
+
+
+          behaviors: [ Polymer.Templatizer ],
+
+          ready: function() {
+              var template = Polymer.dom(this.$.templates).getDistributedNodes()[0];
+
+              if (typeof template !== 'undefined') {
+                  // templatize must be called once before stamp is called
+                  this.templatize(template);
+
+                  var items = [
+                    {
+                      "label": "Item one"
+                    },
+                    {
+                      "label": "Item two"
+                    }
+                  ];
+
+                  for(var i = 0; i < items.length; i++) {
+                      // clone the template and bind with the model
+                      var clone = this.stamp({});
+                      clone.member = items[i];
+
+                      // append clone.root to DOM instead
+                      Polymer.dom(this.$.repeater).appendChild(clone.root);
+                  }
+              }
+          }
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Polymer Templatizer</title>
+    <link rel="import" href="hydra-collection.html">
+  </head>
+  <body>
+      <!-- Same as above, <template> is used in Light DOM -->
+      <hydra-collection>
+          <template class="member">
+              <div>
+                  Label: <span>{{member.label}}</span>
+              </div>
+          </template>
+      </hydra-collection>
+  </body>
+</html>
